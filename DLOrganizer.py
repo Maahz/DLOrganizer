@@ -10,6 +10,10 @@ path = "C:\\Users\\Markku\\Downloads\\"
 target_path:str = "C:\\Users\\Markku\\CleanDownload\\"
 extensions:str
 
+#Create file named FILES MOVED TO CLEAN DOWNLOADS.txt to variable path folder
+if not os.path.exists(path + "FILES MOVED TO CLEAN DOWNLOADS.txt"):
+    open(path + "FILES MOVED TO CLEAN DOWNLOADS.txt","w+")
+
 #Error check paths
 if not exists(path) or not exists(target_path):
     print("Error! One of the paths specified does not exist")
